@@ -13,7 +13,7 @@ Each of the following helper functions has one or more bugs in their implementat
 
 - `generateRandomInt(from, to)` from `numbers.js` returns a random integer between `from` and `to`, inclusive. As this method returns random values, make sure to call it not once but several times with each combination of parameters.
 
-- `generateRandomTime()` from `strings.js` returns a random time string between `'00:00'` and `'23:59'`. It depends on `generateRandomInt`, but also has a bug of its own.
+- `generateRandomTime()` from `strings.js` returns a random time string between `'00:00'` and `'23:59'`. It depends on `generateRandomInt` and might appear to work correctly while that function has an unfixed bug.
 
 - `parseYear(year)` from `strings.js` accepts a string as its only parameter and interprets it as a year: 4-character numeral strings are taken to mean the year itself; 2-character numeral strings are taken to mean a 1900s year; other strings will throw an error. Examples: `parseYear('9876') === 9876`; `parseYear('53') === 1953`; `parseYear('12345')` and `parseYear('two thousand')` should both throw an error.
 
@@ -30,8 +30,9 @@ Each of the following helper functions has one or more bugs in their implementat
 Your **task** is:
 
 1. Without looking at the actual implementations, create unit tests that would fully cover all use cases for the function you’re testing. Apart from where it is stated otherwise, you don’t need to test how a function will react to an invalid input.
-1. Run the tests, make sure that they indeed fail, and verify that it’s a problem in the helpers’ code, not in tests. If some of the helpers pass every test, try hard to come up with some more edge cases and repeat this step.
-1. Fix the problems in the helpers’ code and run the tests again. Make sure that they now all pass.
+1. Run the tests, make sure that they indeed fail, and verify that it’s a problem in the helpers’ code, not in tests. If some of the helpers pass every test, try to come up with some more edge cases and then repeat this step (make an exception for `generateRandomTime` which will appear to work correctly until you fix `generateRandomInt`).
+1. Fix the problems in the helpers’ code and run the tests again. Make sure that they now pass, except for `generateRandomTime`, which should fail.
+1. Fix the implementation of `generateRandomTime` and make sure that all tests now pass.
 
 ## Workflow
 - Fork the repository with this task.
