@@ -34,6 +34,8 @@ Your **task** is:
 1. Fix the problems in the helpers’ code and run the tests again. Make sure that they now pass, except for `generateRandomTime`, which should fail.
 1. Fix the implementation of `generateRandomTime` and make sure that all tests now pass.
 
+You can suppress particular ESLint rules in the helpers’ code if you feel it would be impossible to implement them without breaking the rules.
+
 ## Workflow
 - Fork the repository with this task.
 - Clone forked repository:
