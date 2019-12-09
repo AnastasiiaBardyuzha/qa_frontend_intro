@@ -1,11 +1,5 @@
 import { generateRandomInt } from './numbers';
 
-export function generateRandomTime() {
-  const g = generateRandomInt;
-
-  return `${g(0, 2)}${g(0, 9)}:${g(0, 5)}${g(0, 9)}`;
-}
-
 export function parseYear(year) {
   const numYear = +year;
 
@@ -14,4 +8,10 @@ export function parseYear(year) {
   }
 
   return numYear < 100 ? 1900 + numYear : numYear;
+}
+
+export function generateRandomTime() {
+  const g = generateRandomInt;
+
+  return `${g(0, 2)}${g(0, 9)}:${g(0, 5)}${g(0, 9)}`;
 }
