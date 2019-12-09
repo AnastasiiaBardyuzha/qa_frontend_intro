@@ -1,5 +1,5 @@
 export function countPages(itemCount, itemsPerPage) {
-  return Math.ceil(itemCount / itemsPerPage);
+  return Math.floor(itemCount / itemsPerPage) + 1;
 }
 
 export function generateDistinct(nums) {
