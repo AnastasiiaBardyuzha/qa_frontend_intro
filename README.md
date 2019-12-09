@@ -29,10 +29,9 @@ Each of the following helper functions has one or more bugs in their implementat
 
 Your **task** is:
 
-1. Without looking at the actual implementations, create unit tests that would fully cover all use cases for the function you’re testing.
-1. Run the tests, make sure that they indeed fail, and verify that it’s a problem in the helpers’ code, not in tests. If some of the helpers pass every test, try harder to come up with tests that would make them fail and repeat this step.
+1. Without looking at the actual implementations, create unit tests that would fully cover all use cases for the function you’re testing. Apart from where it is stated otherwise, you don’t need to test how a function will react to an invalid input.
+1. Run the tests, make sure that they indeed fail, and verify that it’s a problem in the helpers’ code, not in tests. If some of the helpers pass every test, try hard to come up with some more edge cases and repeat this step.
 1. Fix the problems in the helpers’ code and run the tests again. Make sure that they now all pass.
-
 
 ## Workflow
 - Fork the repository with this task.
