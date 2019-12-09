@@ -15,7 +15,7 @@ Each of the following helper functions has one or more bugs in their implementat
 
 - `generateRandomTime()` from `strings.js` returns a random time string between `'00:00'` and `'23:59'`. It depends on `generateRandomInt`, but also has a bug of its own.
 
-- `parseYear(year)` from `strings.js` accepts a string as its only parameter and interprets it as a year: 4-character numeral strings are taken to mean the year itself; 2-character numeral strings are taken to mean a 1900s year; other strings will through an error. Examples: `parseYear('9876') === 9876`; `parseYear('53') === 1953`; `parseYear('12345')` and `parseYear('two thousand')` should both throw an error.
+- `parseYear(year)` from `strings.js` accepts a string as its only parameter and interprets it as a year: 4-character numeral strings are taken to mean the year itself; 2-character numeral strings are taken to mean a 1900s year; other strings will throw an error. Examples: `parseYear('9876') === 9876`; `parseYear('53') === 1953`; `parseYear('12345')` and `parseYear('two thousand')` should both throw an error.
 
 - `createStampedObject(object)` from `objects.js` accepts an object as its single parameter and returns an object which has all of `object`’s contents and additionally a field called `stamped` set to `true`. The function is not supposed to mutate the initial `object`.
 
